@@ -6,14 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BA97937B2D4371840059DEE5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA97937A2D4371840059DEE5 /* WidgetKit.framework */; };
+		BA97937D2D4371840059DEE5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA97937C2D4371840059DEE5 /* SwiftUI.framework */; };
+		BA9793882D4371850059DEE5 /* CardWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BA9793782D4371840059DEE5 /* CardWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA9793862D4371850059DEE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA9793572D436D480059DEE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA9793772D4371840059DEE5;
+			remoteInfo = CardWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA97938D2D4371850059DEE5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BA9793882D4371850059DEE5 /* CardWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BA97935F2D436D480059DEE5 /* CardWidgetEncryption.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardWidgetEncryption.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA9793782D4371840059DEE5 /* CardWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CardWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA97937A2D4371840059DEE5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BA97937C2D4371840059DEE5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BA9793902D43728E0059DEE5 /* CardWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BA9793892D4371850059DEE5 /* Exceptions for "CardWidget" folder in "CardWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BA9793772D4371840059DEE5 /* CardWidgetExtension */;
+		};
+		BA97938F2D4371CF0059DEE5 /* Exceptions for "CardWidgetEncryption" folder in "CardWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				KeychainHelper.swift,
+			);
+			target = BA9793772D4371840059DEE5 /* CardWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BA9793612D436D480059DEE5 /* CardWidgetEncryption */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BA97938F2D4371CF0059DEE5 /* Exceptions for "CardWidgetEncryption" folder in "CardWidgetExtension" target */,
+			);
 			path = CardWidgetEncryption;
+			sourceTree = "<group>";
+		};
+		BA97937E2D4371840059DEE5 /* CardWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BA9793892D4371850059DEE5 /* Exceptions for "CardWidget" folder in "CardWidgetExtension" target */,
+			);
+			path = CardWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +88,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA9793752D4371840059DEE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA97937D2D4371840059DEE5 /* SwiftUI.framework in Frameworks */,
+				BA97937B2D4371840059DEE5 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		BA9793562D436D480059DEE5 = {
 			isa = PBXGroup;
 			children = (
+				BA9793902D43728E0059DEE5 /* CardWidgetExtension.entitlements */,
 				BA9793612D436D480059DEE5 /* CardWidgetEncryption */,
+				BA97937E2D4371840059DEE5 /* CardWidget */,
+				BA9793792D4371840059DEE5 /* Frameworks */,
 				BA9793602D436D480059DEE5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +115,18 @@
 			isa = PBXGroup;
 			children = (
 				BA97935F2D436D480059DEE5 /* CardWidgetEncryption.app */,
+				BA9793782D4371840059DEE5 /* CardWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BA9793792D4371840059DEE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA97937A2D4371840059DEE5 /* WidgetKit.framework */,
+				BA97937C2D4371840059DEE5 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +139,12 @@
 				BA97935B2D436D480059DEE5 /* Sources */,
 				BA97935C2D436D480059DEE5 /* Frameworks */,
 				BA97935D2D436D480059DEE5 /* Resources */,
+				BA97938D2D4371850059DEE5 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BA9793872D4371850059DEE5 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BA9793612D436D480059DEE5 /* CardWidgetEncryption */,
@@ -69,6 +155,28 @@
 			productName = CardWidgetEncryption;
 			productReference = BA97935F2D436D480059DEE5 /* CardWidgetEncryption.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BA9793772D4371840059DEE5 /* CardWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA97938A2D4371850059DEE5 /* Build configuration list for PBXNativeTarget "CardWidgetExtension" */;
+			buildPhases = (
+				BA9793742D4371840059DEE5 /* Sources */,
+				BA9793752D4371840059DEE5 /* Frameworks */,
+				BA9793762D4371840059DEE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BA97937E2D4371840059DEE5 /* CardWidget */,
+			);
+			name = CardWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = CardWidgetExtension;
+			productReference = BA9793782D4371840059DEE5 /* CardWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +189,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					BA97935E2D436D480059DEE5 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					BA9793772D4371840059DEE5 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -100,12 +211,20 @@
 			projectRoot = "";
 			targets = (
 				BA97935E2D436D480059DEE5 /* CardWidgetEncryption */,
+				BA9793772D4371840059DEE5 /* CardWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BA97935D2D436D480059DEE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA9793762D4371840059DEE5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +241,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA9793742D4371840059DEE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA9793872D4371850059DEE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA9793772D4371840059DEE5 /* CardWidgetExtension */;
+			targetProxy = BA9793862D4371850059DEE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BA97936B2D436D490059DEE5 /* Debug */ = {
@@ -249,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CardWidgetEncryption/CardWidgetEncryption.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CardWidgetEncryption/Preview Content\"";
@@ -260,16 +395,24 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.WilliamGallegos.CardWidgetEncryption;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -278,6 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CardWidgetEncryption/CardWidgetEncryption.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CardWidgetEncryption/Preview Content\"";
@@ -289,13 +433,91 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.WilliamGallegos.CardWidgetEncryption;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		BA97938B2D4371850059DEE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CardWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSHF427Z2M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CardWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CardWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WilliamGallegos.CardWidgetEncryption.CardWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA97938C2D4371850059DEE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CardWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSHF427Z2M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CardWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CardWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WilliamGallegos.CardWidgetEncryption.CardWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,6 +541,15 @@
 			buildConfigurations = (
 				BA97936E2D436D490059DEE5 /* Debug */,
 				BA97936F2D436D490059DEE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA97938A2D4371850059DEE5 /* Build configuration list for PBXNativeTarget "CardWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA97938B2D4371850059DEE5 /* Debug */,
+				BA97938C2D4371850059DEE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
